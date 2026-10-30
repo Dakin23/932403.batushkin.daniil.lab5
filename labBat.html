@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О себе - Даниил Батушкин</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2, h3 {
+            color: var(--color-accent);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="decor-corner"></div>
+        <h1>Даниил Батушкин</h1>
+        <p>Учёный и исследователь</p>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#hypotheses">Гипотезы</a></li>
+            <li><a href="#methods">Методы</a></li>
+            <li><a href="#stats">Показатели</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+        <button id="theme-btn" type="button" class="theme-btn" aria-pressed="false">Тёмная тема</button>
+    </nav>
+
+    <div class="wrapper">
+        <main>
+            <img src="avatar.png" alt="Фото Даниила Батушкина" width="150" height="150">
+
+            <section id="skills">
+                <h2>Навыки</h2>
+                <ul>
+                    <li>Сбор и анализ данных в полевых условиях</li>
+                    <li>Проведение научных экспериментов</li>
+                    <li>Статистическая обработка результатов</li>
+                    <li>Подготовка научных отчётов</li>
+                </ul>
+            </section>
+
+            <section id="projects">
+                <h2>Проекты</h2>
+                <ol>
+                    <li class="project-item">Влияние зелёных насаждений во дворах на уровень стресса жителей.</li>
+                    <li class="project-item">Сравнительный анализ качества воздуха в разных районах города.</li>
+                    <li class="project-item">Изучение биоразнообразия птиц в городских парках.</li>
+                    <li class="project-item">Оценка эффективности раздельного сбора отходов в кампусе.</li>
+                </ol>
+            </section>
+
+            <div class="hypotheses-toggle-bar">
+                <button id="toggle-hypotheses" type="button">Скрыть гипотезы</button>
+            </div>
+
+            <section id="hypotheses">
+                <h2>Гипотезы исследования</h2>
+                <div class="hypothesis-controls">
+                    <input type="text" id="new-hypothesis" placeholder="">
+                    <button id="add-hypothesis" type="button">Добавить гипотезу</button>
+                </div>
+                <p id="hypotheses-counter"></p>
+                <div class="hypotheses"></div>
+            </section>
+
+            <section id="methods">
+                <h2>Методы исследования</h2>
+                <div class="methods-grid">
+                    <article class="method-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="3"/></svg>
+                        <h3>Полевое наблюдение</h3>
+                        <p>Мониторинг состояния зелёных насаждений и учёт птиц в выбранных районах города.</p>
+                        <details>
+                            <summary>Полное описание</summary>
+                            <p>Наблюдения ведутся по фиксированному маршруту два раза в месяц в течение года. На каждом выходе записываются видовой состав и число птиц, а также площадь озеленения. Данные заносятся в стандартизированный журнал.</p>
+                        </details>
+                    </article>
+                    <article class="method-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="12" x2="16" y2="8"/></svg>
+                        <h3>Инструментальные замеры</h3>
+                        <p>Сбор данных о концентрации CO2 и мелких частиц в воздухе портативными датчиками.</p>
+                        <details>
+                            <summary>Полное описание</summary>
+                            <p>Датчики устанавливаются в контрольных точках на высоте двух метров. Показания снимаются каждый час в течение суток, после чего для каждого района вычисляются среднесуточные значения.</p>
+                        </details>
+                    </article>
+                    <article class="method-card">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="20" x2="20" y2="20"/><line x1="8" y1="20" x2="8" y2="10"/><line x1="12" y1="20" x2="12" y2="6"/><line x1="16" y1="20" x2="16" y2="13"/></svg>
+                        <h3>Статистический анализ</h3>
+                        <p>Обработка собранных показателей и поиск связей между факторами городской среды.</p>
+                        <details>
+                            <summary>Полное описание</summary>
+                            <p>Данные обрабатываются в Python с помощью Pandas и SciPy: строятся корреляции, проверяется значимость различий между районами, готовятся графики для отчёта.</p>
+                        </details>
+                    </article>
+                </div>
+            </section>
+
+            <section id="stats">
+                <h2>Ключевые показатели</h2>
+                <div class="dashboard">
+                    <article class="stat">
+                        <b class="num">12</b>
+                        <p>маршрутов наблюдения</p>
+                    </article>
+                    <article class="stat">
+                        <b class="num">48</b>
+                        <p>замеров в месяц</p>
+                    </article>
+                    <article class="stat">
+                        <b class="num">36</b>
+                        <p>видов птиц учтено</p>
+                    </article>
+                    <article class="stat">
+                        <b class="num">6</b>
+                        <p>контрольных точек воздуха</p>
+                    </article>
+                    <article class="stat">
+                        <b class="num">240</b>
+                        <p>участников опроса</p>
+                    </article>
+                    <article class="stat">
+                        <b class="num">4</b>
+                        <p>отчёта по районам</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contacts">
+                <h2>Обратная связь</h2>
+                <form action="#" method="post" style="opacity: 0.9;">
+                    <label>Имя</label>
+                    <input type="text" name="user_name" placeholder="">
+
+                    <label>Email</label>
+                    <input type="email" name="user_email" placeholder="">
+
+                    <label>Сообщение</label>
+                    <textarea name="user_message" rows="5" placeholder=""></textarea>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </main>
+
+        <aside>
+            <h3>Область науки</h3>
+            <p>Экология городской среды. Изучение того, как природа и город сосуществуют, и как сделать жизнь в мегаполисе здоровее.</p>
+
+            <h3>Любимые технологии</h3>
+            <ul>
+                <li>Python (Pandas, Matplotlib)</li>
+                <li>QGIS для карт</li>
+                <li>Портативные датчики</li>
+            </ul>
+
+            <h3>Контакты</h3>
+            <p>Email: <a href="mailto:kinoktop52@gmail.com">kinoktop52@gmail.com</a></p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Даниил Батушкин. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
